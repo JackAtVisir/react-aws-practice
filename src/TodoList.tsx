@@ -27,6 +27,10 @@ function TodoList() {
       dispatch(deleteTodo(id))
     }
 
+    const handleSave = () => {
+      
+    }
+
     const handleHome = () => {
         navigate("/")
     }
@@ -49,6 +53,7 @@ function TodoList() {
         placeholder="what doing g"
         />
         <button onClick={handleAddTodo}>Add Todo</button>
+        <button onClick={handleSave}>Save List</button>
         <button onClick={handleHome}>Home</button>
       </div>
 
