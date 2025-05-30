@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {useSelector, useDispatch} from "react-redux"
-import {addTodo} from './todoSlice'
+import {addTodo, deleteTodo} from './todoSlice'
 
 interface Todo {
   id: string,
@@ -21,13 +21,18 @@ function App() {
     }
   }
 
+  const handleDeleteTodo = (id: string) => {
+    dispatch(deleteTodo(id))
+  }
+
   return (
     <div>
       <h1>Todo List</h1>
       <ul>
       {todos.map((todo: Todo) => (
         <li key={todo.id}>
-          {todo.text}
+          {todo.text} 
+          <button onClick={()=>{handleDeleteTodo(todo.id)}}>Delete</button>
         </li>
       ))}
     </ul>
