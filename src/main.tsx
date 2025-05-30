@@ -5,11 +5,13 @@ import { Provider } from "react-redux"
 import store from './store.ts'
 import App from './App.tsx'
 import NotFoundPage from './NotFoundPage.tsx';
+import TodoList from './TodoList.tsx';
 
 
 const router = createBrowserRouter([
   {path:"/",element:<App />},
-  {path:"*", element:<NotFoundPage />}
+  {path:"/Todo", element:<TodoList/>},
+  {path:"*", element:<NotFoundPage />},
 ])  
 
 createRoot(document.getElementById('root')!).render(
