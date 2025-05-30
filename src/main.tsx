@@ -10,7 +10,7 @@ import TodoList from './TodoList.tsx';
 
 const router = createBrowserRouter([
   {path:"/",element:<App />},
-  {path:"/Todo", element:<TodoList/>},
+  {path:"/CreateTodo", element:<TodoList/>},
   {path:"*", element:<NotFoundPage />},
 ])  
 
