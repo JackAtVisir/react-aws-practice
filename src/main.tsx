@@ -6,11 +6,13 @@ import store from './store.ts'
 import App from './App.tsx'
 import NotFoundPage from './NotFoundPage.tsx';
 import TodoList from './TodoList.tsx';
+// import AllTodo from './AllTodo.tsx';
 
 
 const router = createBrowserRouter([
   {path:"/",element:<App />},
   {path:"/CreateTodo", element:<TodoList/>},
+  // {path:"/Lists", element:<AllTodo/>},
   {path:"*", element:<NotFoundPage />},
 ])  
 
